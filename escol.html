@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colégio CED 416 de Santa Maria</title>
+    <link rel="shortcut icon" href="./logo escola.png" type="image/x-icon">
+
+    <style>
+
+        body
+         {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #06075a;
+            color: rgb(255, 255, 255);
+            background-image: url('captura de tela (6).png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+        }
+
+        header
+          {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: #ffe605;
+            color: rgb(0, 0, 0);
+        }
+
+        header img {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+            border-radius: 50%;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        /* Seção de Biografia */
+        .bio-intro {
+            background-color: rgba(29, 29, 29, 0.8);
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(158, 158, 158, 0.1);
+            color: white;
+        }
+
+        .bio-intro h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .bio-intro p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+
+        .image-gallery img {
+            width: 20%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Botões de redes sociais */
+        .social-button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 15px;
+            text-align: center;
+            background-color: #36b33d;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+        
+
+        .social-button:hover
+    
+         {
+            background-color: #00ff0d;
+        }
+
+        .social-button-facebook {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 15px;
+            text-align: center;
+            background-color: #0044ff;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+        .social-button-facebook:hover {
+            background-color: #1558A1;
+        }
+
+        /* Estilos da seção de Notícias e Eventos */
+        .news-events {
+            padding: 20px;
+            background-color: #fff;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .news-events h2 {
+            font-size: 2rem;
+            color: #064B8D;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .event-item {
+            display: flex;
+            flex-direction: column;
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+        }
+
+        .event-item:last-child {
+            border-bottom: none;
+        }
+
+        .event-date {
+            color: #777;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .event-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #064B8D;
+        }
+
+        .event-description {
+            font-size: 1rem;
+            color: #414141;
+            margin-top: 5px;
+        }
+
+        .btn {
+            background-color: #ac002b;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            text-align: center;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #032e5b;
+        }
+
+        /* Estilo para a nova seção de mensagem final */
+        .final-message {
+            padding: 20px;
+            background-color: #064B8D;
+            color: white;
+            text-align: center;
+            margin-top: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .final-message h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .final-message p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        /* Estilo para a seção de Contato */
+        .contact-info {
+            background-color: #f1f1f1;
+            padding: 20px;
+            margin-top: 40px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #064B8D;
+        }
+
+        .contact-info p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho com a imagem e título -->
+    <header>
+        <img width="43" height="36" src="logo escola.png" class="attachment-full size-full wp-image-122" alt>
+
+        <h1>Colégio Civico-Militar CED 416 de Santa Maria</h1>
+    </header>
+
+    <!-- Seção de Biografia -->
+    <section class="bio-intro">
+        <h2>CCMDF CED 416</h2>
+        <p>A Escola de Excelência foi fundada com o objetivo de transformar a educação em uma experiência enriquecedora e inovadora. Com um corpo docente altamente qualificado, buscamos oferecer um ensino de qualidade que prepara nossos alunos para os desafios do futuro. Nosso compromisso vai além do aprendizado acadêmico, promovendo valores como cidadania, responsabilidade social e sustentabilidade. Oferecemos uma infraestrutura moderna e atividades extracurriculares que complementam o desenvolvimento integral de nossos estudantes.</p>
+    </section>
+
+    <!-- Galeria de imagens -->
+    <section class="image-gallery">
+        <img src="formatura.jpg" alt="Imagem 1">
+        <img src="bombeiros-df.jpg" alt="Imagem logo cbmdf">
+        <img src="Captura de Tela (1).png" alt="Imagem ideb">
+    </section>
+
+    <!-- Botões de redes sociais abaixo das imagens -->
+    <div style="text-align: center;">
+        <a href="https://www.educacao.df.gov.br/wp-conteudo/uploads/2019/10/MANUAL_DO_ALUNO_CCMDF.pdf" target="_blank" class="social-button">Manual do aluno</a>
+        <a href="https://www.instagram.com/ccmdfced416stmaria/" target="_blank" class="social-button">Nos siga no Instagram</a>
+        <a href="https://www.instagram.com/projeto_de_vidah416/#" target="_blank" class="social-button">Siga o Projeto de Vida no Instagram</a>
+        <a href="https://www.facebook.com/p/ECIM-CED-416-de-Santa-Maria-100066945455327/" target="_blank" class="social-button-facebook">Curta nossa página no Facebook</a>
+    </div>
+
+    <!-- Seção de Notícias e Eventos -->
+    <section class="news-events">
+        <h2>Notícias e Eventos</h2>
+
+        <!-- Evento 1 -->
+        <div class="event-item">
+            <h1>25</H1>
+            <span class="event-date">25 de Novembro de 2024</span>
+            <h3 class="event-title">Feira de Ciências 2024</h3>
+            <p class="event-description">Nossa tradicional Feira de Ciências acontecerá no próximo mês! Participe das exposições e descubra os projetos incríveis feitos pelos alunos.</p>
+            <a href="#" class="btn">Saiba Mais</a>
+        </div>
+
+        <!-- Evento 2 -->
+        <div class="event-item">
+            <span class="event-date">5 de Dezembro de 2024</span>
+            <h3 class="event-title">Semana Cultural da Escola</h3>
+            <p class="event-description">Prepare-se para uma semana cheia de atividades culturais, apresentações artísticas e muito mais. Não perca!</p>
+            <a href="#" class="btn">Saiba Mais</a>
+        </div>
+
+        <!-- Evento 3 -->
+        <div class="event-item">
+            <span class="event-date">10 de Dezembro de 2024</span>
+            <h3 class="event-title">Reunião de Pais e Mestres</h3>
+            <p class="event-description">Uma oportunidade para os pais conhecerem o desempenho dos alunos e conversarem com os professores sobre o ano letivo.</p>
+            <a href="#" class="btn">Saiba Mais</a>
+        </div>
+
+        <!-- Notícia 1 -->
+        <div class="event-item">
+            <span class="event-date">20 de Novembro de 2024</span>
+            <h3 class="event-title">Escola Recebe Prêmio de Excelência Educacional</h3>
+            <p class="event-description">Nosso colégio foi reconhecido com o Prêmio de Excelência Educacional pelo trabalho desenvolvido no âmbito acadêmico e social.</p>
+            <a href="#" class="btn">Saiba Mais</a>
+        </div>
+    </section>
+
+    <!-- Nova Seção de Mensagem Final -->
+    <section class="final-message">
+        <h2>Agradecemos sua visita!</h2>
+        <p>Nosso compromisso com a educação é contínuo e estamos sempre em busca de formas inovadoras de proporcionar aos nossos alunos as melhores oportunidades. Agradecemos a sua atenção e esperamos contar com sua participação nas nossas atividades e eventos!</p>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section class="contact-info">
+        <h2>Entre em Contato - (61) 3901-6609</h2>
+<h2>E-mail:</strong> ecimced416desantamaria@gmail.com</h2>
+        <p><strong>Endereço:</strong> QUADRA EQ 416/516, S/N AREA ESPECILA LOTE A. SANTA MARIA. 72546-330 Brasília - DF.
+        </p>
+    </section>
+
+</body>
+</html>
